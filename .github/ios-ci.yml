@@ -1,0 +1,22 @@
+name: iOS CI
+
+on:
+  push:
+    paths:
+      - 'ios/**'
+  pull_request:
+    paths:
+      - 'ios/**'
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+      - name: Build iOS project
+        working-directory: ios
+        run: xcodebuild build -scheme TestApp -quiet
