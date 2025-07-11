@@ -1,0 +1,13 @@
+name: Question
+description: Вопрос по тестовому заданию
+title: "[QUESTION]"
+labels: [test-task]
+body:
+  - type: textarea
+    attributes:
+      label: Что непонятно?
+      description: Опишите подробно, с указанием раздела и кода
+  - type: textarea
+    attributes:
+      label: Что уже пробовали?
+      description: Опишите ваши попытки решения
